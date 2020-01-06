@@ -33,45 +33,28 @@ def Johnson(x):
     #######VARIABLES######
     z = np.arange(0.25, 1.26, 0.01)  # z values
     QR = np.zeros((1, 101))
-    q = np.zeros((101, 4)) # quartile
-    j = np.zeros((101, 4)) # element of x relative to q
-    y = np.zeros((101, 4))
+    q = j = y = np.zeros((101, 4))
 
     xl = np.zeros((101, 1))
     xm = np.zeros((101, 1))
     xu = np.zeros((101, 1))
 
-    b_eta = np.zeros((101, 1))
-    b_gamma = np.zeros((101, 1))
-    b_lambda = np.zeros((101, 1))
-    b_epsilon = np.zeros((101, 1))
+    b_eta = b_gamma = b_lambda = b_epsilon = np.zeros((101, 1))
 
-    l_eta = np.zeros((101, 1))
-    l_gamma = np.zeros((101, 1))
-    l_lambda = np.zeros((101, 1))
-    l_epsilon = np.zeros((101, 1))
+    l_eta = l_gamma = l_lambda = l_epsilon = np.zeros((101, 1))
 
     u_eta = np.zeros((101, 1))
     u_gamma = np.zeros((101, 1))
     u_lambda = np.zeros((101, 1))
     u_epsilon = np.zeros((101, 1))
 
-    xsb = np.zeros((len(x), 101))
-    xsl = np.zeros((len(x), 101))
-    xsu = np.zeros((len(x), 101))
+    xsb = xsl = xsu = np.zeros((len(x), 101))
 
     xsb_valida = np.zeros((1, 101))
     xsl_valida = np.zeros((1, 101))
     xsu_valida = np.zeros((1, 101))
 
-    xsb_adtest = np.zeros((1, 101))
-    xsl_adtest = np.zeros((1, 101))
-    xsu_adtest = np.zeros((1, 101))
-
-    f_gamma = 0
-    f_lambda = 0
-    f_epsilon = 0
-    f_eta = 0
+    xsb_adtest = xsl_adtest = xsu_adtest = np.zeros((1, 101))
     #################################
 
     for i in range(101):
